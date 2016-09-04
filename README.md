@@ -45,9 +45,8 @@ Add the package to your application service providers in `config/app.php`
     Kyslik\ArtisanStubs\ArtisanStubsServiceProvider::class,
 ],
 ```
-## Publish configuration
+## Publish stubs
 
-Publish the package configuration file to your application.
 
     $ php artisan vendor:publish --provider="Kyslik\ArtisanStubs\ArtisanStubsServiceProvider" --tag="stubs"
 
