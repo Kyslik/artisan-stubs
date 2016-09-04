@@ -88,6 +88,10 @@ class ArtisanStubsServiceProvider extends ServiceProvider
         $this->app->singleton('command.test.make', function ($app) {
             return new TestMakeCommand($app['files']);
         });
+
+        $this->app->singleton('command.policy.make', function ($app) {
+            return new PolicyMakeCommand($app['files']);
+        });
     }
 
     public function provides()
@@ -107,6 +111,7 @@ class ArtisanStubsServiceProvider extends ServiceProvider
         'command.request.make',
         'command.seeder.make',
         'command.test.make',
+        'command.policy.make',
         ];
     }
 }
