@@ -40,10 +40,18 @@ class ArtisanStubsServiceProvider extends ServiceProvider
         $this->app->singleton('command.console.make', function ($app) {
             return new ConsoleMakeCommand($app['files']);
         });
+
+        $this->app->singleton('command.controller.make', function ($app) {
+            return new ControllerMakeCommand($app['files']);
+        });
     }
 
     public function provides()
     {
-        return ['migration.creator'];
+        return [
+        'migration.creator',
+        'command.console.make',
+        'command.controller.make'
+        ];
     }
 }

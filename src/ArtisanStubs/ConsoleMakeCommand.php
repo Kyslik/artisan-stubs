@@ -6,8 +6,8 @@ use Illuminate\Foundation\Console\ConsoleMakeCommand as ConsoleMakeCommandOrigin
 
 class ConsoleMakeCommand extends ConsoleMakeCommandOriginal
 {
-    public function getStubPath()
+    protected function getStub()
     {
-        return resource_path() . '/stubs/console.stub';
+        return resource_path('/stubs/console.stub');
     }
 }
