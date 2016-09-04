@@ -56,6 +56,10 @@ class ArtisanStubsServiceProvider extends ServiceProvider
         $this->app->singleton('command.listener.make', function ($app) {
             return new ListenerMakeCommand($app['files']);
         });
+
+        $this->app->singleton('command.mail.make', function ($app) {
+            return new MailMakeCommand($app['files']);
+        });
     }
 
     public function provides()
@@ -67,6 +71,7 @@ class ArtisanStubsServiceProvider extends ServiceProvider
         'command.event.make',
         'command.job.make',
         'command.listener.make',
+        'command.mail.make',
         ];
     }
 }
