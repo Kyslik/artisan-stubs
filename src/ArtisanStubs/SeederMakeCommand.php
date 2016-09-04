@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Database\Console\Seeds\SeederMakeCommand as SeederMakeCommandOriginal;
 
+/**
+ * Class SeederMakeCommand
+ * @package Kyslik\ArtisanStubs
+ */
 class SeederMakeCommand extends SeederMakeCommandOriginal
 {
+    use CheckStub;
+
     /**
      * Get the stub file for the generator.
      *
@@ -13,6 +19,6 @@ class SeederMakeCommand extends SeederMakeCommandOriginal
      */
     protected function getStub()
     {
-        return resource_path('/stubs/seeder.stub');
+        return $this->checkStub('/stubs/seeder.stub');
     }
 }

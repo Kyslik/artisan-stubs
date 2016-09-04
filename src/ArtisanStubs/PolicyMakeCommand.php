@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Foundation\Console\PolicyMakeCommand as PolicyMakeCommandOriginal;
 
+/**
+ * Class PolicyMakeCommand
+ * @package Kyslik\ArtisanStubs
+ */
 class PolicyMakeCommand extends PolicyMakeCommandOriginal
 {
+    use CheckStub;
+
     /**
      * Get the stub file for the generator.
      *
@@ -14,9 +20,9 @@ class PolicyMakeCommand extends PolicyMakeCommandOriginal
     protected function getStub()
     {
         if ($this->option('model')) {
-            return resource_path('/stubs/policy.stub');
+            return $this->checkStub('/stubs/policy.stub');
         }
 
-        return resource_path('/stubs/policy.plain.stub');
+        return $this->checkStub('/stubs/policy.plain.stub');
     }
 }

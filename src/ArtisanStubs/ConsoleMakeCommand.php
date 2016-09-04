@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Foundation\Console\ConsoleMakeCommand as ConsoleMakeCommandOriginal;
 
+/**
+ * Class ConsoleMakeCommand
+ * @package Kyslik\ArtisanStubs
+ */
 class ConsoleMakeCommand extends ConsoleMakeCommandOriginal
 {
+    use CheckStub;
+
     /**
      * Get the stub file for the generator.
      *
@@ -13,6 +19,6 @@ class ConsoleMakeCommand extends ConsoleMakeCommandOriginal
      */
     protected function getStub()
     {
-        return resource_path('/stubs/console.stub');
+        return $this->checkStub('/stubs/console.stub');
     }
 }

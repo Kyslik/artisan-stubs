@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Routing\Console\MiddlewareMakeCommand as MiddlewareMakeCommandOriginal;
 
+/**
+ * Class MiddlewareMakeCommand
+ * @package Kyslik\ArtisanStubs
+ */
 class MiddlewareMakeCommand extends MiddlewareMakeCommandOriginal
 {
+    use CheckStub;
+
     /**
      * Get the stub file for the generator.
      *
@@ -13,6 +19,6 @@ class MiddlewareMakeCommand extends MiddlewareMakeCommandOriginal
      */
     protected function getStub()
     {
-        return resource_path('/stubs/routing/middleware.stub');
+        return $this->checkStub('/stubs/routing/middleware.stub');
     }
 }

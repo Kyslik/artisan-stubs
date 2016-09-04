@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Foundation\Console\ProviderMakeCommand as ProviderMakeCommandOriginal;
 
+/**
+ * Class ProviderMakeCommand
+ * @package Kyslik\ArtisanStubs
+ */
 class ProviderMakeCommand extends ProviderMakeCommandOriginal
 {
+    use CheckStub;
+
     /**
      * Get the stub file for the generator.
      *
@@ -13,6 +19,6 @@ class ProviderMakeCommand extends ProviderMakeCommandOriginal
      */
     protected function getStub()
     {
-        return resource_path('/stubs/provider.stub');
+        return $this->checkStub('/stubs/provider.stub');
     }
 }

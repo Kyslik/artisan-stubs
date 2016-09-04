@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Foundation\Console\ListenerMakeCommand as ListenerMakeCommandOriginal;
 
+/**
+ * Class ListenerMakeCommand
+ * @package Kyslik\ArtisanStubs
+ */
 class ListenerMakeCommand extends ListenerMakeCommandOriginal
 {
+    use CheckStub;
+
     /**
      * Get the stub file for the generator.
      *
@@ -14,9 +20,9 @@ class ListenerMakeCommand extends ListenerMakeCommandOriginal
     protected function getStub()
     {
         if ($this->option('queued')) {
-            return resource_path('/stubs/listener-queued.stub');
+            return $this->checkStub('/stubs/listener-queued.stub');
         } else {
-            return resource_path('/stubs/listener.stub');
+            return $this->checkStub('/stubs/listener.stub');
         }
     }
 }

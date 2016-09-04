@@ -4,6 +4,10 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class ArtisanStubsServiceProvider
+ * @package Kyslik\ArtisanStubs
+ */
 class ArtisanStubsServiceProvider extends ServiceProvider
 {
     /**
@@ -19,8 +23,8 @@ class ArtisanStubsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-                __DIR__.'/../stubs' => resource_path('/stubs'),
-            ], 'stubs');
+            __DIR__ . '/../stubs' => resource_path('/stubs'),
+        ], 'stubs');
     }
 
     /**
@@ -89,24 +93,27 @@ class ArtisanStubsServiceProvider extends ServiceProvider
         });
     }
 
+    /**
+     * @return array
+     */
     public function provides()
     {
         return [
-        'migration.creator',
-        'command.console.make',
-        'command.controller.make',
-        'command.event.make',
-        'command.job.make',
-        'command.listener.make',
-        'command.mail.make',
-        'command.middleware.make',
-        'command.model.make',
-        'command.notification.make',
-        'command.provider.make',
-        'command.request.make',
-        'command.seeder.make',
-        'command.test.make',
-        'command.policy.make',
+            'migration.creator',
+            'command.console.make',
+            'command.controller.make',
+            'command.event.make',
+            'command.job.make',
+            'command.listener.make',
+            'command.mail.make',
+            'command.middleware.make',
+            'command.model.make',
+            'command.notification.make',
+            'command.provider.make',
+            'command.request.make',
+            'command.seeder.make',
+            'command.test.make',
+            'command.policy.make',
         ];
     }
 }

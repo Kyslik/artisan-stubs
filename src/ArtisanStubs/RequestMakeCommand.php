@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Foundation\Console\RequestMakeCommand as RequestMakeCommandOriginal;
 
+/**
+ * Class RequestMakeCommand
+ * @package Kyslik\ArtisanStubs
+ */
 class RequestMakeCommand extends RequestMakeCommandOriginal
 {
+    use CheckStub;
+
     /**
      * Get the stub file for the generator.
      *
@@ -13,6 +19,6 @@ class RequestMakeCommand extends RequestMakeCommandOriginal
      */
     protected function getStub()
     {
-        return resource_path('/stubs/request.stub');
+        return $this->checkStub('/stubs/request.stub');
     }
 }

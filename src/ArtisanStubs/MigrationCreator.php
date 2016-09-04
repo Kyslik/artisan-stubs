@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Database\Migrations\MigrationCreator as MigrationCreatorOriginal;
 
+/**
+ * Class MigrationCreator
+ * @package Kyslik\ArtisanStubs
+ */
 class MigrationCreator extends MigrationCreatorOriginal
 {
+    use CheckStub;
+
     /**
      * Get the path to the stubs.
      *
@@ -13,6 +19,6 @@ class MigrationCreator extends MigrationCreatorOriginal
      */
     public function getStubPath()
     {
-        return resource_path('/stubs/migrations');
+        return $this->checkStub('/stubs/migrations');
     }
 }

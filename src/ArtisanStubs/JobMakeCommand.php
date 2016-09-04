@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Foundation\Console\JobMakeCommand as JobMakeCommandOriginal;
 
+/**
+ * Class JobMakeCommand
+ * @package Kyslik\ArtisanStubs
+ */
 class JobMakeCommand extends JobMakeCommandOriginal
 {
+    use CheckStub;
+
     /**
      * Get the stub file for the generator.
      *
@@ -14,9 +20,9 @@ class JobMakeCommand extends JobMakeCommandOriginal
     protected function getStub()
     {
         if ($this->option('sync')) {
-            return resource_path('/stubs/job.stub');
+            return $this->checkStub('/stubs/job.stub');
         } else {
-            return resource_path('/stubs/job-queued.stub');
+            return $this->checkStub('/stubs/job-queued.stub');
         }
     }
 }

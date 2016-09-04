@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Foundation\Console\EventMakeCommand as EventMakeCommandOriginal;
 
+/**
+ * Class EventMakeCommand
+ * @package Kyslik\ArtisanStubs
+ */
 class EventMakeCommand extends EventMakeCommandOriginal
 {
+    use CheckStub;
+
     /**
      * Get the stub file for the generator.
      *
@@ -13,6 +19,6 @@ class EventMakeCommand extends EventMakeCommandOriginal
      */
     protected function getStub()
     {
-        return resource_path('/stubs/event.stub');
+        return $this->checkStub('/stubs/event.stub');
     }
 }

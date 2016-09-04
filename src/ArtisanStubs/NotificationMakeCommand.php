@@ -4,8 +4,14 @@ namespace Kyslik\ArtisanStubs;
 
 use Illuminate\Foundation\Console\NotificationMakeCommand as NotificationMakeCommandOriginal;
 
+/**
+ * Class NotificationMakeCommand
+ * @package Kyslik\ArtisanStubs
+ */
 class NotificationMakeCommand extends NotificationMakeCommandOriginal
 {
+    use CheckStub;
+
     /**
      * Get the stub file for the generator.
      *
@@ -13,6 +19,6 @@ class NotificationMakeCommand extends NotificationMakeCommandOriginal
      */
     protected function getStub()
     {
-        return resource_path('/stubs/notification.stub');
+        return $this->checkStub('/stubs/notification.stub');
     }
 }
