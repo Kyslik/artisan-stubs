@@ -68,9 +68,13 @@ class ArtisanStubsServiceProvider extends ServiceProvider
         $this->app->singleton('command.model.make', function ($app) {
             return new ModelMakeCommand($app['files']);
         });
-
+        //TODO: check version for 5.2 and disable this one
         $this->app->singleton('command.notification.make', function ($app) {
             return new NotificationMakeCommand($app['files']);
+        });
+
+        $this->app->singleton('command.provider.make', function ($app) {
+            return new ProviderMakeCommand($app['files']);
         });
     }
 
@@ -87,6 +91,7 @@ class ArtisanStubsServiceProvider extends ServiceProvider
         'command.middleware.make',
         'command.model.make',
         'command.notification.make',
+        'command.provider.make',
         ];
     }
 }
