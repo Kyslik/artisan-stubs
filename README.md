@@ -1,7 +1,7 @@
 # Overrider of Artisan make:whatever stubs
-[![Latest Version](https://img.shields.io/github/release/Kyslik/artisan-stubs.svg?style=flat-square)](https://github.com/Kyslik/column-sortable/releases)
+[![Latest Version](https://img.shields.io/github/release/Kyslik/artisan-stubs.svg?style=flat-square)](https://github.com/Kyslik/artisan-stubs/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Total Downloads](https://img.shields.io/packagist/dt/Kyslik/artisan-stubs.svg?style=flat-square)](https://packagist.org/packages/Kyslik/column-sortable)
+[![Total Downloads](https://img.shields.io/packagist/dt/Kyslik/artisan-stubs.svg?style=flat-square)](https://packagist.org/packages/Kyslik/artisan-stubs)
 
 Override default artisan make stubs
 
