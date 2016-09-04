@@ -1,0 +1,22 @@
+{
+    "name": "kyslik/artisan-stubs",
+    "description": "Override default artisan make stubs",
+    "keywords": ["artisan", "make", "command", "stubs", "stub", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Kiesel",
+            "email": "martinkiesel@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "Illuminate/Support": "5.3.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kyslik\\ArtisanStubs\\": "src/ArtisanStubs/"
+        }
+    },
+    "minimum-stability": "dev"
+}
