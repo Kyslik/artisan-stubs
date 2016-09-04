@@ -61,3 +61,7 @@ Tip
 # Usage
 
 Simply edit `resources/stubs/*.stub` you like.
+
+
+### Idea from
+ [Q&A](http://stackoverflow.com/q/21810251/1564365)
