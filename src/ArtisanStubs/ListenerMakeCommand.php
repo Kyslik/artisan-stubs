@@ -6,6 +6,11 @@ use Illuminate\Foundation\Console\ListenerMakeCommand as ListenerMakeCommandOrig
 
 class ListenerMakeCommand extends ListenerMakeCommandOriginal
 {
+    /**
+     * Get the stub file for the generator.
+     *
+     * @return string
+     */
     protected function getStub()
     {
         if ($this->option('queued')) {

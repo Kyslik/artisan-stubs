@@ -6,6 +6,11 @@ use Illuminate\Routing\Console\ControllerMakeCommand as ControllerMakeCommandOri
 
 class ControllerMakeCommand extends ControllerMakeCommandOriginal
 {
+    /**
+     * Get the stub file for the generator.
+     *
+     * @return string
+     */
     protected function getStub()
     {
         if ($this->option('resource')) {

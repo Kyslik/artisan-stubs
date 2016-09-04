@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider;
 
 class ArtisanStubsServiceProvider extends ServiceProvider
 {
-
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -16,20 +15,16 @@ class ArtisanStubsServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap the application services.
-     *
-     * @return void
      */
     public function boot()
     {
         $this->publishes([
-                __DIR__. '/../stubs' => resource_path('/stubs')
+                __DIR__.'/../stubs' => resource_path('/stubs'),
             ], 'stubs');
     }
 
     /**
      * Register the application services.
-     *
-     * @return void
      */
     public function register()
     {
