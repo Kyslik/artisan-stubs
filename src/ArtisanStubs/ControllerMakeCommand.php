@@ -19,7 +19,9 @@ class ControllerMakeCommand extends ControllerMakeCommandOriginal
      */
     protected function getStub()
     {
-        if ($this->option('resource')) {
+        if ($this->option('model')) {
+            return $this->checkStub('/stubs/routing/controller.model.stub');
+        } elseif ($this->option('resource')) {
             return $this->checkStub('/stubs/routing/controller.stub');
         }
 
