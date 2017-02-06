@@ -11,12 +11,13 @@
     ],
     "require": {
         "php": ">=5.6.4",
-        "Illuminate/Support": "5.3.*"
+        "laravel/framework": "5.3.*"
     },
     "autoload": {
         "psr-4": {
             "Kyslik\\ArtisanStubs\\": "src/ArtisanStubs/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
