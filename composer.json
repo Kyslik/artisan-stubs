@@ -9,15 +9,17 @@
             "email": "martinkiesel@gmail.com"
         }
     ],
+    "support": {
+        "issues": "https://github.com/Kyslik/artisan-stubs/issues"
+    },
     "require": {
         "php": ">=5.6.4",
-        "laravel/framework": "5.3.*"
+        "laravel/framework": "~5.2"
     },
     "autoload": {
         "psr-4": {
             "Kyslik\\ArtisanStubs\\": "src/ArtisanStubs/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "minimum-stability": "dev"
 }

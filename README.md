@@ -19,12 +19,12 @@ composer require kyslik/artisan-stubs
 or
 
 
-Add to `Composer.json` following
+Add to `composer.json` following
 
 ```
 {
     "require": {
-        "kyslik/artisan-stubs": "~1.0.0"
+        "kyslik/artisan-stubs": "~1.0"
     }
 }
 ```
@@ -47,7 +47,6 @@ Add the package to your application service providers in `config/app.php`
 ```
 ## Publish stubs
 
-
     $ php artisan vendor:publish --provider="Kyslik\ArtisanStubs\ArtisanStubsServiceProvider" --tag="stubs"
 
 Tip
@@ -59,7 +58,7 @@ Tip
 
 # Usage
 
-Simply edit `resources/stubs/*.stub` you like.
+Simply edit `resources/stubs/*.stub` you like and enjoy artisan commands as usual.
 
 
 ### Idea from
