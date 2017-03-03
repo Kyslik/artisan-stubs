@@ -19,6 +19,11 @@ class TestMakeCommand extends TestMakeCommandOriginal
      */
     protected function getStub()
     {
+        //TODO: markdown change in L5.4
+        if ($this->option('unit')) {
+            return $this->checkStub('/stubs/unit-test.stub');
+        }
+
         return $this->checkStub('/stubs/test.stub');
     }
 }

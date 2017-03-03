@@ -19,6 +19,10 @@ class NotificationMakeCommand extends NotificationMakeCommandOriginal
      */
     protected function getStub()
     {
+        if ($this->option('markdown')) {
+            return $this->checkStub('/stubs/markdown-notification.stub');
+        }
+
         return $this->checkStub('/stubs/notification.stub');
     }
 }

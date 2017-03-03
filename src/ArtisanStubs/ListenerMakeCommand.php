@@ -21,8 +21,8 @@ class ListenerMakeCommand extends ListenerMakeCommandOriginal
     {
         if ($this->option('queued')) {
             return $this->checkStub('/stubs/listener-queued.stub');
-        } else {
-            return $this->checkStub('/stubs/listener.stub');
         }
+
+        return $this->checkStub('/stubs/listener.stub');
     }
 }

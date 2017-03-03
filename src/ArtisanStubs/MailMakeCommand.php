@@ -19,6 +19,10 @@ class MailMakeCommand extends MailMakeCommandOriginal
      */
     protected function getStub()
     {
+        if ($this->option('markdown')) {
+            return $this->checkStub('/stubs/markdown-mail.stub');
+        }
+
         return $this->checkStub('/stubs/mail.stub');
     }
 }

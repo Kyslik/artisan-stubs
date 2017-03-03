@@ -21,8 +21,8 @@ class JobMakeCommand extends JobMakeCommandOriginal
     {
         if ($this->option('sync')) {
             return $this->checkStub('/stubs/job.stub');
-        } else {
-            return $this->checkStub('/stubs/job-queued.stub');
         }
+
+        return $this->checkStub('/stubs/job-queued.stub');
     }
 }

@@ -19,12 +19,12 @@ composer require kyslik/artisan-stubs
 or
 
 
-Add to `composer.json` following
+Add to `composer.json` following (for Laravel 5.4):
 
 ```
 {
     "require": {
-        "kyslik/artisan-stubs": "~1.0"
+        "kyslik/artisan-stubs": "2.*"
     }
 }
 ```
