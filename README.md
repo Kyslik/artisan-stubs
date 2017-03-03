@@ -24,7 +24,7 @@ Add to `composer.json` following
 ```
 {
     "require": {
-        "kyslik/artisan-stubs": "~1.0"
+        "kyslik/artisan-stubs": "1.*"
     }
 }
 ```
