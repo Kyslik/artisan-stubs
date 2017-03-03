@@ -12,6 +12,11 @@ class MigrationCreator extends MigrationCreatorOriginal
 {
     use CheckStub;
 
+    public function stubPath()
+    {
+        return $this->getStubPath();
+    }
+
     /**
      * Get the path to the stubs.
      *
